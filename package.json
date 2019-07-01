@@ -1,0 +1,35 @@
+{
+	"name": "mailto-util",
+	"version": "1.0.0",
+	"description": "Dead simple mailto url builder",
+	"license": "MIT",
+	"repository": "Nanaki/mailto-util",
+	"author": {
+		"name": "Sébastien NICOLAS",
+		"email": "sebastien.nicolass@gmail.com"
+	},
+	"engines": {
+		"node": ">=6"
+	},
+	"scripts": {
+		"test": "ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"body",
+		"cc",
+		"cci",
+		"email",
+		"mailto",
+		"rfc6068",
+		"rfc5322",
+		"subject",
+		"uri"
+	],
+	"devDependencies": {
+		"ava": "*",
+		"xo": "*"
+	}
+}
