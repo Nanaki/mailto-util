@@ -1,6 +1,6 @@
 # mailto-util [![Build Status](https://travis-ci.org/nanaki/mailto-util.svg?branch=master)](https://travis-ci.org/nanaki/mailto-util)
 
-> A dead simple mailto url builder (Browser and Node.js compatible).
+> A dead simple mailto url builder (Browser and Node.js compatible) closest to [RFC6068](https://tools.ietf.org/html/rfc6068) and [RFC5322](https://tools.ietf.org/html/rfc5322).
 
 
 ## Install
@@ -29,52 +29,52 @@ mailTo();
 ```js
 mailTo({
   recipients: {
-    to: 'sugar@youhou.com',
+    to: 'sugar@example.org',
   },
 });
-//=> 'mailto:sugar@youhou.com'
+//=> 'mailto:sugar@example.org'
 ```
 
 ### Recipient list
 ```js
 mailTo({
   recipients: {
-    to: ['mum@youhou.com', 'daddy@youhou.com'],
-    cc: ['bro@youhou.com', 'sista@youhou.com'],
-    cci: ['sugar@youhou.com', 'chris@youhou.com']
+    to: ['mum@example.org', 'daddy@example.org'],
+    cc: ['bro@example.org', 'sista@example.org'],
+    cci: ['sugar@example.org', 'chris@example.org']
   },
   subject: 'Summer party!',
   body: 'Are you ready for tonight?'
 });
-//=> 'mailto:mum@youhou.com,daddy@youhou.com?cc=bro@youhou.com,sista@youhou.com&cci=sugar@youhou.com,chris@youhou.com&subject=Summer%20party!&body=Are%20you%20ready%20for%20tonight%20%3F'
+//=> 'mailto:mum@example.org,daddy@example.org?cc=bro@example.org,sista@example.org&cci=sugar@example.org,chris@example.org&subject=Summer%20party!&body=Are%20you%20ready%20for%20tonight%20%3F'
 ```
 
 ### Recipient string
 ```js
 mailTo({
   recipients: {
-    to: 'daddy@youhou.com',
-    cc: 'bro@youhou.com',
-    cci: 'sugar@youhou.com'
+    to: 'daddy@example.org',
+    cc: 'bro@example.org',
+    cci: 'sugar@example.org'
   },
   subject: 'Summer party!',
   body: 'Are you ready for tonight?'
 });
-//=> 'mailto:daddy@youhou.com?cc=bro@youhou.com&cci=sugar@youhou.com&subject=Summer%20party!&body=Are%20you%20ready%20for%20tonight%20%3F'
+//=> 'mailto:daddy@example.org?cc=bro@example.org&cci=sugar@example.org&subject=Summer%20party!&body=Are%20you%20ready%20for%20tonight%20%3F'
 ```
 
 ### Full featured mail
 ```js
 mailTo({
   recipients: {
-    to: ['mum@youhou.com', 'daddy@youhou.com'],
-    cc: 'bro@youhou.com',
-    cci: 'sugar@youhou.com'
+    to: ['mum@example.org', 'daddy@example.org'],
+    cc: 'bro@example.org',
+    cci: 'sugar@example.org'
   },
   subject: 'My Wedding',
   body: 'Here we go!'
 });
-//=> 'mailto:mum@youhou.com,daddy@youhou.com?cc=bro@youhou.com&cci=sugar@youhou.com&subject=My%20Wedding&body=Here%20we%20go!'
+//=> 'mailto:mum@example.org,daddy@example.org?cc=bro@example.org&cci=sugar@example.org&subject=My%20Wedding&body=Here%20we%20go!'
 ```
 
 
